@@ -1,5 +1,6 @@
 from trainer import Trainer
 import creature
+import moves
 
 lucas = Trainer("Lucas", 20, [
 	creature.Pikachu(),
@@ -9,12 +10,11 @@ lucas = Trainer("Lucas", 20, [
 ])
 lucas.list_creatures()
 
-def tackle(a, b):
-	b.curr_health -= round(40 * (a.attack / 255))
-
 pikachu = lucas.creatures[0]
 charmander = lucas.creatures[1]
-pikachu.do_move(charmander, tackle)
+squirtle = lucas.creatures[2]
+bulbasaur = lucas.creatures[3]
 
-pikachu.status()
-charmander.status()
+bulbasaur.do_move(squirtle, moves.absorb)
+bulbasaur.status()
+squirtle.status()
