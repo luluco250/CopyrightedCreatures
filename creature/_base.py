@@ -63,3 +63,6 @@ SPD: {}""".format(
 	
 	def do_move(self, other, move):
 		move(self, other)
+	
+	def fainted(self):
+		return self.curr_health <= 0

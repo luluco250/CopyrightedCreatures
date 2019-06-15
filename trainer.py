@@ -8,3 +8,11 @@ class Trainer:
 		print("{}'s creatures: ".format(self.name))
 		for c in self.creatures:
 			print(c.name)
+	
+	def defeated(self):
+		result = True
+
+		for creature in self.creatures:
+			result = result and creature.fainted()
+		
+		return result

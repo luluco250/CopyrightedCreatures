@@ -2,13 +2,17 @@ from trainer import Trainer
 import creature
 import moves
 
-lucas = Trainer("Lucas", 20, [
+red = Trainer("Ash", 20, [
 	creature.Pikachu(),
 	creature.Charmander(),
 	creature.Squirtle(),
-	creature.Bulbasaur()
 ])
-lucas.list_creatures()
+
+gold = Trainer("Ethan", 10, [
+	creature.Geodude(),
+	creature.Bulbasaur(),
+	creature.Pidgey(),
+])
 
 pikachu = lucas.creatures[0]
 charmander = lucas.creatures[1]
